@@ -12,15 +12,24 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            },
-            {
+                loader: "style-loader!css-loader"
+            }, {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
-                })
+                loader: "style-loader!css-loader!sass-loader"
             }
+
+            // {
+            //     test: /\.css$/,
+            //     loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+            //
+            // },
+            // {
+            //     test: /\.scss$/,
+            //     use: ExtractTextPlugin.extract({
+            //         fallback: 'style-loader',
+            //         use: ['css-loader', 'sass-loader']
+            //     })
+            // }
         ]
         // loaders: [{
         //     test: /\.css$/,
@@ -31,7 +40,7 @@ module.exports = {
         // }]
     },
     plugins: [
-        new ExtractTextPlugin('style.css')
+        // new ExtractTextPlugin('style.css')
         // new ExtractTextPlugin("style.css", {
         //     allChunks: true
         // })
