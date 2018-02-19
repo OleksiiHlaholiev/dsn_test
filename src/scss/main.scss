@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+//@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+$base-font: 'Roboto';
+$title-padding: 3em;
+
+h1 {
+    font-family: $base-font;
+    font-size: 80px;
+    text-align: center;
+    padding: $title-padding;
+}

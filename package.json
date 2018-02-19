@@ -1,0 +1,27 @@
+{
+  "name": "dsn_test",
+  "version": "1.0.0",
+  "description": "dsn_test_solution",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch",
+    "server": "webpack-dev-server"
+  },
+  "author": "glalex",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  }
+}
