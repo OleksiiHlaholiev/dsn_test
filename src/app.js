@@ -1,6 +1,6 @@
 import 'bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './scss/base.scss';
 import './scss/main.scss';
 

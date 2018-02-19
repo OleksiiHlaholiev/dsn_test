@@ -10,3 +10,12 @@ h1 {
     text-align: center;
     padding: $title-padding;
 }
+
+.main-top-container {
+    height: 50vh;
+    width: 100%;
+
+    background-image: url("../assets/png/slide3.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
