@@ -2,8 +2,9 @@
 
 $base-font: 'Roboto';
 
-body {
-    overflow-y: scroll;
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 * {
