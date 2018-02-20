@@ -38,10 +38,133 @@ header {
     }
 }
 
+.courses-item-cont {
+    background-color: #fff;
+    padding: 15px 10px 20px 10px;
+    position: relative;
+
+    .mini-img-cont {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        z-index: 5;
+
+        width: 80px;
+        height: 80px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.329);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .star-rating-cont {
+        cursor: pointer;
+        text-align: right;
+        padding-right: 10px;
+        padding-bottom: 15px;
+    }
+    .img-cont {
+        img {
+            width: 100%;
+        }
+    }
+
+    .info-cont, .location-cont {
+        padding: 0 10px;
+    }
+
+    .info-cont {
+        .courses-title {
+            position: relative;
+            padding: 15px 30px;
+            margin-bottom: 0;
+
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.333;
+
+            span {
+                font: inherit;
+                display: block;
+            }
+
+            &:before {
+                position: absolute;
+                top: 15px;
+                left: 0;
+
+                display: inline-block;
+                content: '';
+                background-image: url("../../assets/png/icon-check.png");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .courses-description {
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.8);
+            line-height: 1.5;
+        }
+    }
+
+    .line {
+        background-color: rgba(0, 0, 0, 0.18);
+        height: 1px;
+    }
+
+    .location-cont {
+        .courses-location {
+            position: relative;
+            padding: 0 30px;
+            margin-bottom: 0;
+
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.702);
+            line-height: 1.643;
+
+            span {
+                font: inherit;
+                display: block;
+            }
+
+            &:before {
+                position: absolute;
+                top: 5px;
+                left: 0;
+
+                display: inline-block;
+                content: '';
+                background-image: url("../../assets/png/icon-map-gray.png");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 25px;
+                height: 20px;
+            }
+        }
+    }
+}
+
 .main-container {
     .main-container-wrapper {
         margin-top: -25vh;
         padding-bottom: 10vh;
+
+        .container {
+            @media all and (min-width: 1200px) {
+                max-width: 1040px;
+            }
+        }
 
         .news-wrapper {
 
@@ -60,10 +183,26 @@ header {
             .left-cont {
                 .title-cont {
                     padding: 0 13%;
+
+                    .main-title {
+                        position: relative;
+
+                        &:before {
+                            position: absolute;
+                            top: 0;
+                            left: -55px;
+
+                            display: inline-block;
+                            content: url("../../assets/png/icon-leaflet.png");
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+
                 }
             }
             .right-cont {
-
+                margin-left: -15px;
             }
 
             .news-items-cont {
@@ -74,14 +213,50 @@ header {
                     margin-bottom: 20px;
                     box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.329);
 
-
                     .news-header-cont {
-                        padding: 30px 0;
+                        padding: 40px 0 30px 0;
                         cursor: pointer;
 
                         .news-header {
                             font-size: 24px;
                             font-weight: 900;
+
+                            position: relative;
+
+                            &:before {
+                                position: absolute;
+                                top: 0;
+                                left: -55px;
+
+                                display: inline-block;
+                                content: url("../../assets/png/cap-icon.png");
+                                width: 41px;
+                                height: 34px;
+
+                                transform: scale(0.75);
+                            }
+
+                            &:after {
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                //padding-left: 30px;
+
+                                display: inline-block;
+                                content: url("../../assets/png/icon-arrow-up.png");
+                                width: 17px;
+                                height: 28px;
+
+                                transform: rotateZ(180deg);
+                                transition: transform 0.4s;
+                            }
+                        }
+                    }
+                    .news-header-cont.active {
+                        .news-header {
+                            &:after {
+                                transform: rotateZ(0);
+                            }
                         }
                     }
 
@@ -92,13 +267,67 @@ header {
                         font-weight: 700;
                         padding-bottom: 10%;
                         margin: 0;
-                        line-height: 1.714;
+                        line-height: 1.8;
 
                         &.active {
 
                         }
                     }
                 }
+            }
+        }
+
+        .courses-header {
+            padding: 30px 40px;
+
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .courses-items-cont {
+            display: flex;
+
+            position: relative;
+
+            .arrow {
+                position: absolute;
+                z-index: 5;
+                top: 50%;
+                transform: translateY(-50%);
+
+                width: 65px;
+                height: 55px;
+                padding: 0;
+
+                background-color: #fff;
+                outline: 0;
+                border: none;
+                border-radius: 4px;
+
+                cursor: pointer;
+                box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.329);
+                transition: box-shadow 0.4s;
+
+                img {
+
+                }
+
+                &:hover {
+                    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.329);
+                }
+            }
+            .arrow-left {
+                right: calc(100% + 15px);
+            }
+            .arrow-right{
+                left: calc(100% + 15px);
+            }
+
+            .wrapper {
+                width: 25%;
+                padding: 15px 7.5px;
             }
         }
     }
