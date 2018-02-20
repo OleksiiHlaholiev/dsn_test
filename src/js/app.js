@@ -1,8 +1,5 @@
-import 'bootstrap';
+require('../scss/root.scss');
 
-import 'bootstrap/dist/css/bootstrap.css';
-import './../scss/base.scss';
-import './../scss/main.scss';
-
-import 'chunks/rainbows';
-import 'js/chunks/unicorns.js';
+require('./chunks/rainbows');
+require('./chunks/unicorns.js');
+require('./chunks/index.js');

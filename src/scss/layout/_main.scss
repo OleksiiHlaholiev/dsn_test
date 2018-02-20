@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$base-font: 'Roboto';
+
+body {
+    overflow-y: scroll;
+}
+
+* {
+    font-family: $base-font;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    background-color: #1b5f75;
+}
+
+.main-top-container {
+    position: relative;
+    min-height: 50vh;
+    width: 100%;
+
+    background-image: url("../../assets/png/slide3.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .dark-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    }
+}
+
+.main-container {
+    .main-container-wrapper {
+        margin-top: -25vh;
+        padding-bottom: 10vh;
+
+        .news-wrapper {
+
+            .title-cont {
+                color: #fff;
+                margin-bottom: 40px;
+                padding: 0 13%;
+
+                .main-title {
+                    font-size: 40px;
+                }
+                .slogan-title {
+                    font-size: 14px;
+                }
+            }
+
+            .left-cont {
+
+            }
+            .right-cont {
+
+            }
+
+            .news-items-cont {
+                .news-item-cont {
+                    background-color: #fff;
+                    color: #000;
+                    padding: 0 13%;
+                    margin-bottom: 20px;
+                    box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.329);
+
+
+                    .news-header-cont {
+                        padding: 30px 0;
+                        cursor: pointer;
+
+                        .news-header {
+                            font-size: 24px;
+                            font-weight: 900;
+                        }
+                    }
+
+                    .news-description {
+                        display: none;
+
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-bottom: 10%;
+                        margin: 0;
+                        line-height: 1.714;
+
+                        &.active {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
