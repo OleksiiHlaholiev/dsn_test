@@ -1,8 +1,9 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    entry: './src/app.js',
+    entry: './src/js/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -56,6 +57,13 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin('style.css'),
+        new CopyWebpackPlugin([
+            {from: 'src/assets', to:'assets'}
+        ])
+        // new CopyWebpackPlugin([
+        //     {from:'src/assets/*.png'},
+        //     {from:'src/assets/*.jpg'}
+        // ])
     ]
 };

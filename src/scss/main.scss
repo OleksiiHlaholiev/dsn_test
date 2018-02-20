@@ -8,14 +8,54 @@ h1 {
     font-family: $base-font;
     font-size: 80px;
     text-align: center;
-    padding: $title-padding;
+}
+
+header {
+    position: fixed;
+
+    height: 60px;
+    background-color: #1b5f75;
+
 }
 
 .main-top-container {
-    height: 50vh;
+    position: relative;
+    min-height: 50vh;
     width: 100%;
 
-    background-image: url("../assets/png/slide3.png");
+    background-image: url("assets/png/slide3.png");
     background-position: center center;
     background-repeat: no-repeat;
+
+    .dark-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+    }
+}
+
+.main-container {
+    .main-container-wrapper {
+        .news-wrapper {
+
+            .title-cont {
+                .main-title {
+
+                }
+                .slogan-title {
+
+                }
+            }
+
+
+            .left-cont {
+
+            }
+            .right-cont {
+
+            }
+        }
+    }
 }
