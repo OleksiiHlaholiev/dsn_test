@@ -48,7 +48,6 @@ header {
             .title-cont {
                 color: #fff;
                 margin-bottom: 40px;
-                padding: 0 13%;
 
                 .main-title {
                     font-size: 40px;
@@ -59,7 +58,9 @@ header {
             }
 
             .left-cont {
-
+                .title-cont {
+                    padding: 0 13%;
+                }
             }
             .right-cont {
 
