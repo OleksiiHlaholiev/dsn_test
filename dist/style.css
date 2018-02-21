@@ -20,6 +20,122 @@ header {
   width: 100%;
   height: 60px;
   background-color: #1b5f75;
+  display: flex;
+  align-items: center;
+}
+
+header .header-cont {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .header-cont .logo-cont .logo-header {
+  padding: 0;
+  margin: 0;
+  font-size: 23px;
+  font-weight: 100;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .header-cont .logo-cont .first {
+  display: block;
+}
+
+header .header-cont .logo-cont .second {
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  header .header-cont .logo-cont .first {
+    display: none;
+  }
+
+  header .header-cont .logo-cont .second {
+    display: block;
+  }
+}
+
+header .header-cont .search-cont {
+  position: relative;
+  width: 50%;
+}
+
+header .header-cont .search-cont .text-field input {
+  height: 35px;
+  width: 100%;
+  padding: 5px 50px;
+  padding-left: 70px;
+  border: none;
+  outline: none;
+}
+
+header .header-cont .search-cont button {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  height: 100%;
+  padding: 0 15px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+header .header-cont .search-cont .select-btn {
+  left: 0;
+}
+
+header .header-cont .search-cont .submit-btn {
+  right: 0;
+}
+
+header .header-cont .cabinet-cont span {
+  display: inline-block;
+}
+
+header .header-cont .cabinet-cont .msg-cont {
+  position: relative;
+}
+
+header .header-cont .cabinet-cont .msg-cont .cnt {
+  position: absolute;
+  top: -10px;
+  left: 100%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ff0000;
+  border-radius: 7px;
+  padding: 4px;
+}
+
+header .header-cont .cabinet-cont .msg-cont img {
+  width: 25px;
+}
+
+header .header-cont .cabinet-cont .user-cont {
+  padding-left: 40px;
+}
+
+header .header-cont .cabinet-cont .user-cont img {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+}
+
+@media all and (max-width: 768px) {
+  header .header-cont .cabinet-cont .user-cont {
+    padding-left: 20px;
+  }
+
+  header .header-cont .cabinet-cont .user-cont img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .main-top-container {
