@@ -29,6 +29,13 @@ header {
   background-image: url(assets/slide3.png);
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media all and (max-width: 992px) {
+  .main-top-container {
+    min-height: 150vh;
+  }
 }
 
 .main-top-container .dark-mask {
@@ -39,9 +46,10 @@ header {
 }
 
 .courses-item-cont {
+  position: relative;
   background-color: #fff;
   padding: 15px 10px 20px 10px;
-  position: relative;
+  box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.329);
 }
 
 .courses-item-cont .mini-img-cont {
@@ -68,6 +76,12 @@ header {
   padding-bottom: 15px;
 }
 
+.courses-item-cont .star-rating-cont img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+}
+
 .courses-item-cont .img-cont img {
   width: 100%;
 }
@@ -90,6 +104,12 @@ header {
 .courses-item-cont .info-cont .courses-title span {
   font: inherit;
   display: block;
+}
+
+@media all and (max-width: 992px) {
+  .courses-item-cont .info-cont .courses-title span {
+    display: inline-block;
+  }
 }
 
 .courses-item-cont .info-cont .courses-title:before {
@@ -152,6 +172,12 @@ header {
   padding-bottom: 10vh;
 }
 
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper {
+    margin-top: -130vh;
+  }
+}
+
 @media all and (min-width: 1200px) {
   .main-container .main-container-wrapper .container {
     max-width: 1040px;
@@ -169,6 +195,29 @@ header {
 
 .main-container .main-container-wrapper .news-wrapper .title-cont .slogan-title {
   font-size: 14px;
+}
+
+.main-container .main-container-wrapper .news-wrapper .left-cont {
+  order: 0;
+}
+
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .news-wrapper .left-cont {
+    order: 1;
+  }
+
+  .main-container .main-container-wrapper .news-wrapper .left-cont .title-cont {
+    text-align: center;
+    padding: 40px 0 0 !important;
+  }
+
+  .main-container .main-container-wrapper .news-wrapper .left-cont .title-cont .main-title {
+    font-size: 26px;
+  }
+
+  .main-container .main-container-wrapper .news-wrapper .left-cont .title-cont .slogan-title {
+    display: none;
+  }
 }
 
 .main-container .main-container-wrapper .news-wrapper .left-cont .title-cont {
@@ -189,8 +238,29 @@ header {
   height: 32px;
 }
 
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .news-wrapper .left-cont .title-cont .main-title:before {
+    position: static;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
 .main-container .main-container-wrapper .news-wrapper .right-cont {
   margin-left: -15px;
+  order: 1;
+}
+
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .news-wrapper .right-cont {
+    order: 0;
+    margin-left: 0;
+  }
+
+  .main-container .main-container-wrapper .news-wrapper .right-cont .title-cont {
+    display: none;
+  }
 }
 
 .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont {
@@ -199,6 +269,12 @@ header {
   padding: 0 13%;
   margin-bottom: 20px;
   box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.329);
+}
+
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont {
+    padding: 0 6%;
+  }
 }
 
 .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont .news-header-cont {
@@ -212,6 +288,13 @@ header {
   position: relative;
 }
 
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont .news-header-cont .news-header {
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
 .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont .news-header-cont .news-header:before {
   position: absolute;
   top: 0;
@@ -221,6 +304,14 @@ header {
   width: 41px;
   height: 34px;
   transform: scale(0.75);
+}
+
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont .news-header-cont .news-header:before {
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont .news-header-cont .news-header:after {
@@ -233,6 +324,12 @@ header {
   height: 28px;
   transform: rotateZ(180deg);
   transition: transform 0.4s;
+}
+
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont .news-header-cont .news-header:after {
+    display: none;
+  }
 }
 
 .main-container .main-container-wrapper .news-wrapper .news-items-cont .news-item-cont .news-header-cont.active .news-header:after {
@@ -252,16 +349,22 @@ header {
   padding: 30px 40px;
   font-size: 28px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 400;
   color: #000;
 }
 
-.main-container .main-container-wrapper .courses-items-cont {
-  display: flex;
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .courses-header {
+    padding: 20px 0;
+    font-size: 16px;
+  }
+}
+
+.main-container .main-container-wrapper .courses-slider-cont {
   position: relative;
 }
 
-.main-container .main-container-wrapper .courses-items-cont .arrow {
+.main-container .main-container-wrapper .courses-slider-cont .arrow {
   position: absolute;
   z-index: 5;
   top: 50%;
@@ -278,19 +381,36 @@ header {
   transition: box-shadow 0.4s;
 }
 
-.main-container .main-container-wrapper .courses-items-cont .arrow:hover {
+@media all and (max-width: 992px) {
+  .main-container .main-container-wrapper .courses-slider-cont .arrow {
+    width: 45px;
+    height: 40px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .main-container .main-container-wrapper .courses-slider-cont .arrow {
+    display: none;
+  }
+}
+
+.main-container .main-container-wrapper .courses-slider-cont .arrow:hover {
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.329);
 }
 
-.main-container .main-container-wrapper .courses-items-cont .arrow-left {
+.main-container .main-container-wrapper .courses-slider-cont .arrow-left-btn {
   right: calc(100% + 15px);
 }
 
-.main-container .main-container-wrapper .courses-items-cont .arrow-right {
+.main-container .main-container-wrapper .courses-slider-cont .arrow-right-btn {
   left: calc(100% + 15px);
 }
 
-.main-container .main-container-wrapper .courses-items-cont .wrapper {
-  width: 25%;
-  padding: 15px 7.5px;
+.main-container .main-container-wrapper .courses-slider-cont .courses-slider {
+  display: flex;
+}
+
+.main-container .main-container-wrapper .courses-slider-cont .courses-slider .item {
+  position: relative;
+  z-index: 5;
 }

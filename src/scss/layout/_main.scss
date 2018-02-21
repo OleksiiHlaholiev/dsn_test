@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+//$xsPoint: 576px;
+$smPoint: 576px;
+$mdPoint: 768px;
+$lgPoint: 992px;
+$xlPoint: 1200px;
+
 $base-font: 'Roboto';
 
 html, body {
@@ -29,6 +35,11 @@ header {
     background-image: url("../../assets/png/slide3.png");
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @media all and (max-width: $lgPoint) {
+        min-height: 150vh;
+    }
 
     .dark-mask {
         position: absolute;
@@ -40,9 +51,10 @@ header {
 }
 
 .courses-item-cont {
+    position: relative;
     background-color: #fff;
     padding: 15px 10px 20px 10px;
-    position: relative;
+    box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.329);
 
     .mini-img-cont {
         position: absolute;
@@ -67,6 +79,12 @@ header {
         text-align: right;
         padding-right: 10px;
         padding-bottom: 15px;
+
+        img {
+            display: inline-block;
+            width: auto;
+            max-width: 100%;
+        }
     }
     .img-cont {
         img {
@@ -92,6 +110,10 @@ header {
             span {
                 font: inherit;
                 display: block;
+
+                @media all and (max-width: $lgPoint) {
+                    display: inline-block;
+                }
             }
 
             &:before {
@@ -161,8 +183,12 @@ header {
         margin-top: -25vh;
         padding-bottom: 10vh;
 
+        @media all and (max-width: $lgPoint) {
+            margin-top: -130vh;
+        }
+
         .container {
-            @media all and (min-width: 1200px) {
+            @media all and (min-width: $xlPoint) {
                 max-width: 1040px;
             }
         }
@@ -182,6 +208,26 @@ header {
             }
 
             .left-cont {
+                order: 0;
+
+                @media all and (max-width: $lgPoint) {
+                    order: 1;
+
+                    .title-cont {
+                        text-align: center;
+                        padding: 40px 0 0 !important;
+
+                        .main-title {
+                            font-size: 26px;
+                        }
+
+                        .slogan-title {
+                            display: none;
+                        }
+                    }
+
+                }
+
                 .title-cont {
                     padding: 0 13%;
 
@@ -197,6 +243,13 @@ header {
                             content: url("../../assets/png/icon-leaflet.png");
                             width: 32px;
                             height: 32px;
+
+                            @media all and (max-width: $lgPoint) {
+                                position: static;
+                                display: block;
+                                margin: 0 auto;
+                                margin-bottom: 10px;
+                            }
                         }
                     }
 
@@ -204,6 +257,16 @@ header {
             }
             .right-cont {
                 margin-left: -15px;
+
+                order: 1;
+                @media all and (max-width: $lgPoint) {
+                    order: 0;
+                    margin-left: 0;
+
+                    .title-cont {
+                        display: none;
+                    }
+                }
             }
 
             .news-items-cont {
@@ -214,6 +277,10 @@ header {
                     margin-bottom: 20px;
                     box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.329);
 
+                    @media all and (max-width: $lgPoint) {
+                        padding: 0 6%;
+                    }
+
                     .news-header-cont {
                         padding: 40px 0 30px 0;
                         cursor: pointer;
@@ -223,6 +290,11 @@ header {
                             font-weight: 900;
 
                             position: relative;
+
+                            @media all and (max-width: $lgPoint) {
+                                text-align: center;
+                                font-size: 22px;
+                            }
 
                             &:before {
                                 position: absolute;
@@ -235,6 +307,12 @@ header {
                                 height: 34px;
 
                                 transform: scale(0.75);
+
+                                @media all and (max-width: $lgPoint) {
+                                    position: static;
+                                    display: block;
+                                    margin: 0 auto;
+                                }
                             }
 
                             &:after {
@@ -250,6 +328,10 @@ header {
 
                                 transform: rotateZ(180deg);
                                 transition: transform 0.4s;
+
+                                @media all and (max-width: $lgPoint) {
+                                    display: none;
+                                }
                             }
                         }
                     }
@@ -283,13 +365,16 @@ header {
 
             font-size: 28px;
             line-height: 1.2;
-            font-weight: 700;
+            font-weight: 400;
             color: #000;
+
+            @media all and (max-width: $lgPoint) {
+                padding: 20px 0;
+                font-size: 16px;
+            }
         }
 
-        .courses-items-cont {
-            display: flex;
-
+        .courses-slider-cont {
             position: relative;
 
             .arrow {
@@ -311,6 +396,14 @@ header {
                 box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.329);
                 transition: box-shadow 0.4s;
 
+                @media all and (max-width: $lgPoint) {
+                    width: 45px;
+                    height: 40px;
+                }
+                @media all and (max-width: $smPoint) {
+                    display: none;
+                }
+
                 img {
 
                 }
@@ -319,16 +412,22 @@ header {
                     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.329);
                 }
             }
-            .arrow-left {
+            .arrow-left-btn {
                 right: calc(100% + 15px);
             }
-            .arrow-right{
+            .arrow-right-btn{
                 left: calc(100% + 15px);
             }
 
-            .wrapper {
-                width: 25%;
-                padding: 15px 7.5px;
+            .courses-slider {
+                display: flex;
+
+                .item {
+                    position: relative;
+                    z-index: 5;
+                    //width: 25%;
+                    //padding: 15px 7.5px;
+                }
             }
         }
     }
