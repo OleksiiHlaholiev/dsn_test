@@ -9,7 +9,7 @@ $(function () {
 
         $(coursesSlider).owlCarousel({
             loop:true,
-            margin:15,
+            margin:0,
             items:1,
             nav:false,
             autoplay:false,
