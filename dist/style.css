@@ -413,4 +413,5 @@ header {
 .main-container .main-container-wrapper .courses-slider-cont .courses-slider .item {
   position: relative;
   z-index: 5;
+  padding: 15px 7.5px;
 }
