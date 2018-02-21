@@ -96,10 +96,10 @@ $(function () {
             margin:0,
             items:1,
             nav:false,
-            autoplay:false,
+            autoplay:true,
 
             smartSpeed:1000,
-            autoplayTimeout:7000,
+            autoplayTimeout:5000,
             autoplayHoverPause:false,
 
             responsive:{
